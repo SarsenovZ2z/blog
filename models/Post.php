@@ -29,9 +29,10 @@
 
             //setting id and date_created
             $query = "SELECT id, date_created FROM posts LIMIT 1";
-            $result = mysqli_fetch_object($conn->query($query));
-            $this->id = $result->id;
-            $this->date_created = $result->date_created;
+            $result = $conn->query($query);
+            $post = mysqli_fetch_object($result);
+            $this->id = $post->id;
+            $this->date_created = $post->date_created;
             mysqli_free_result($result);
             $db->closeConnection();
         }

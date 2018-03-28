@@ -19,14 +19,15 @@
                 word-wrap: break-word;
             }
             .post-sm-desc {
+                padding-bottom: 20px;
                 margin-bottom: 20px;
+                background-position: center;
+                background-size: cover;
             }
             .post {
                 display: block;
                 height: 200px;
                 overflow-y: hidden;
-                background-position: center;
-                background-size: cover;
                 padding: 30px 30px 50px 20px;
                 transition: 0.2s ease-in;
                 color: white;
@@ -34,12 +35,15 @@
             .post span {
                 padding: 2px;
                 border-radius: 5px;
-                background-color: rgba(0, 0, 0, 0.6);
+                background-color: rgba(0, 0, 0, 0.5);
             }
             .post:hover {
                 transform: scale(1.05);
                 color: white;
                 text-decoration: none;
+            }
+            .post:hover span {
+                filter: drop-shadow(0 0 0.75rem black);
             }
         </style>
     </head>
@@ -69,12 +73,12 @@
             <div class="jumbotron">
                 <div class="row">
                     <?php while($post = mysqli_fetch_object($result, 'Post')):?>
-                        <div class="col-lg-3 post-sm-desc">
-                            <a href="/blog.php?id=<?=$post->id?>" class="post" style="background-image: url(<?=$post->image?>)">
+                        <div class="col-lg-3 post-sm-desc" style="background-image: url(<?=$post->image?>)">
+                            <a href="/blog.php?id=<?=$post->id?>" class="post">
                                 <h4><span><?=$post->title?></span></h4>
                                 <h6><span>Author: <?=$post->author?></span></h6>
-                                <h6><span><?=$post->description_short?></span></h6>
                                 <small><span><?=$post->date_created?></span></small>
+                                <h6><span><?=$post->description_short?></span></h6>
                             </a>
                         </div>
                     <?php endwhile;?>

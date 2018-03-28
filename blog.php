@@ -30,6 +30,12 @@ if (isset($_GET['id'])) {
                 background-image: url(<?=$post->image?>);
                 background-position: center;
                 background-size: cover;
+                color: white;
+            }
+            .post span {
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 3px;
+                border-radius: 10px;
             }
         </style>
     </head>
@@ -58,8 +64,9 @@ if (isset($_GET['id'])) {
         <section>
             <div class="post">
                 <div class="container">
-                    <h1><?=$post->title?></h1>
-                    <h6>Author: <?=$post->author?></h6><small><?=$post->date_created?></small>
+                    <h1><span><?=$post->title?></span></h1>
+                    <h6><span>Author: <?=$post->author?></span></h6>
+                    <span><small><?=$post->date_created?></small></span>
                 </div>
             </div>
             <div class="container">

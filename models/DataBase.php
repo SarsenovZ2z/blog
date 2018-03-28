@@ -3,7 +3,7 @@
         private $conn;
 
         public function connect() {
-            $this->conn = new mysqli("localhost", "root", "9293709b13", "blog");
+            $this->conn = new mysqli("localhost", "secret", "secret", "secret");
             if ($this->conn->connect_error) {
                 die("Connection failed: " . $this->conn->connect_error);
             }
@@ -15,9 +15,6 @@
         }
 
         function __destruct() {
-            if (mysqli_ping($this->conn)) {
-                mysqli_close($this->conn);
-            }
         }
 
     }

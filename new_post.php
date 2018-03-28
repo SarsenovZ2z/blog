@@ -36,35 +36,37 @@
         </nav>
         <section>
             <div class="jumbotron">
-                <form id="test" class="" action="blog.php" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="author">Author: </label>
-                        <input type="text" name="author" class="form-control" placeholder="" required/>
-                    </div>
-                    <div class="form-group">
-                        <label for="title">Title: </label>
-                        <input type="text" name="title"  class="form-control" placeholder="" required/>
-                    </div>
-                    <div class="form-group">
-                        <label for="description_short">Short description: </label>
-                        <textarea name="description_short" class="form-control" rows="2" placeholder="" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description: </label>
-                        <textarea name="description" class="form-control" rows="3" placeholder="" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="content">Content: </label>
-                        <textarea name="content" class="form-control" rows="5" placeholder="" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image: </label>
-                        <input type="file" name="image"  placeholder=""/>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Upload"/>
-                    </div>
-                </form>
+                <div class="container">
+                    <form id="test" class="" action="blog.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="author">Author: </label>
+                            <input type="text" name="author" class="form-control" placeholder="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title: </label>
+                            <input type="text" name="title"  class="form-control" placeholder="" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description_short">Short description: </label>
+                            <textarea name="description_short" class="form-control" rows="2" placeholder="" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description: </label>
+                            <textarea name="description" class="form-control" rows="3" placeholder="" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content: </label>
+                            <textarea name="content" class="form-control" rows="5" placeholder="" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image: </label>
+                            <input type="file" name="image"  placeholder=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Upload" accept="image/x-png,image/gif,image/jpeg"/>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </section>
