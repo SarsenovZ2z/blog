@@ -45,6 +45,12 @@
             .post:hover span {
                 filter: drop-shadow(0 0 0.75rem black);
             }
+
+            @media screen and (max-width: 992px) {
+                .post {
+                    height: 300px;
+                }
+            }
         </style>
     </head>
     <body>
